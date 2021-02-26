@@ -1,17 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>大事件 登陆/注册</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
+    <link rel="stylesheet" href="/assets/css/login.css" />
+  </head>
+  <body>
+    <!-- logo -->
 
-</head>
+    <div class="layui-main">
+      <img src="/assets/images/logo.png" alt="" />
+    </div>
 
-<body>
+    <!-- 登陆注册区域 -->
 
+    <div class="loginAndRegbox">
+      <div class="title-box"></div>
 
-</body>
+      <!-- 登陆login -->
+      <div class="login-box">
+        <form action="" class="layui-form" id="form-login">
+          <!-- 用户名 -->
+          <div class="layui-form-item">
+            <i class="layui-icon layui-icon-username"></i>
+            <input
+              type="text"
+              name="username"
+              required
+              lay-verify="required"
+              placeholder="请输入用户名"
+              autocomplete="off"
+              class="layui-input"
+            />
+          </div>
 
+          <!-- 密码 -->
+          <div class="layui-form-item">
+            <i class="layui-icon layui-icon-password"></i>
+            <input
+              type="password"
+              name="password"
+              required
+              lay-verify="required"
+              placeholder="请输入密码"
+              autocomplete="off"
+              class="layui-input"
+            />
+          </div>
+
+          <!-- 提交按钮 -->
+          <div class="layui-form-item">
+            <!-- 注意：表单提交按钮和普通按钮的区别，就是 lay-submit 属性 -->
+            <button
+              class="layui-btn layui-btn-fluid layui-btn-normal"
+              lay-submit
+            >
+              立即提交
+            </button>
+          </div>
+
+          <!-- 跳转 -->
+          <div class="links">
+            <a href="javascirpt:;" id="linkToReg">去注册</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- 注册reg -->
+      <div class="reg-box">
+        <form action="" class="layui-form" id="form-reg">
+          <!-- 用户名 -->
+          <div class="layui-form-item">
+            <i class="layui-icon layui-icon-username"></i>
+            <input
+              type="text"
+              name="username"
+              required
+              lay-verify="required"
+              placeholder="请输入用户名"
+              autocomplete="off"
+              class="layui-input"
+            />
+          </div>
+
+          <!-- 密码 -->
+          <div class="layui-form-item">
+            <i class="layui-icon layui-icon-password"></i>
+            <input
+              type="password"
+              name="password"
+              required
+              lay-verify="required|psw"
+              placeholder="请输入密码"
+              autocomplete="off"
+              class="layui-input"
+            />
+          </div>
+
+          <!-- 再次确认密码 -->
+          <div class="layui-form-item">
+            <i class="layui-icon layui-icon-password"></i>
+            <input
+              type="password"
+              name="repassword"
+              required
+              lay-verify="required|psw|repsw"
+              placeholder="再次确认密码"
+              autocomplete="off"
+              class="layui-input"
+            />
+          </div>
+
+          <!-- 提交按钮 -->
+          <div class="layui-form-item">
+            <!-- 注意：表单提交按钮和普通按钮的区别，就是 lay-submit 属性 -->
+            <button
+              class="layui-btn layui-btn-fluid layui-btn-normal"
+              lay-submit
+            >
+              立即提交
+            </button>
+          </div>
+
+          <!-- 跳转 -->
+          <div class="links">
+            <a href="javascirpt:;" id="linkToLogin">去登陆</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- 引入JS -->
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/js/baseAPI.js"></script>
+    <script src="/assets/js/login.js"></script>
+  </body>
 </html>
